@@ -202,7 +202,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <Image src="ootoMeetings.png" style={{ width: "1179px" }} />
+      <Image src="/ootoMeetings1.png" alt="meeting1" width={500} height={500} />
     </div>
   );
 }
