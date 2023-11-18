@@ -1,20 +1,9 @@
-// import MiddleText from "../next/MiddleText";
 import Image from "next/image";
 import BackgroundImage from "../public/brooke.png";
-import { NavigationItem } from "./navigation-item";
-const EmailInputStyle = {
-  fontSize: "18px",
-  border: "1px solid black",
-  width: "514px",
-  color: "blue",
-  height: "56px",
-  marginLeft: "124px",
-  paddingLeft: "18px",
-  fontFamily: "Mulish",
-  marginTop: "40px",
-};
+import { NavigationItem } from "./components/navigation-item";
+import { EmailInput } from "./components/email-input";
 
-const Texts = () => {
+const NavigationBar = () => {
   return (
     <div
       style={{
@@ -64,7 +53,6 @@ const Texts = () => {
             width: "128px",
             height: "56px",
             borderRadius: "5px",
-            fontFamily: "Mulish",
             gap: "20px",
             borderStyle: "solid",
             borderColor: "white",
@@ -96,14 +84,6 @@ export const Button = () => {
   );
 };
 
-const EmailInput = ({}) => {
-  return (
-    <div>
-      <input style={EmailInputStyle} placeholder={"Email"} />
-    </div>
-  );
-};
-
 const Header = () => {
   return (
     <div
@@ -115,7 +95,6 @@ const Header = () => {
         <p
           style={{
             fontSize: "48px",
-            fontFamily: "WorkSans",
             fontWeight: "400px",
             lineHeight: "56.3px",
             color: "white",
@@ -138,15 +117,15 @@ export default function Home() {
       <div
         style={{
           height: "100vh",
-          width: "100vw",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundImage: `url(${BackgroundImage.src})`,
-          fontFamily: "Mulish",
+          paddingLeft: "139px",
+          paddingTop: "24px",
         }}
       >
-        <Texts />
+        <NavigationBar />
         <Header />
         <main style={{ gap: "60px", display: "flex" }}>
           <EmailInput />
@@ -154,7 +133,7 @@ export default function Home() {
         </main>
       </div>
 
-      <div style={{}}>
+      <div>
         <h1
           style={{
             height: "120px",
@@ -173,7 +152,6 @@ export default function Home() {
               fontWeight: "800px",
               width: "398px",
               fontSize: "18px",
-              fontFamily: "Mulish",
             }}
           >
             Give everyone you work with—inside and outside your company—a more
