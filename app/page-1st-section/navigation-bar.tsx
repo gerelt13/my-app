@@ -22,13 +22,13 @@ export const NavigationBar = () => {
         />
         <path d="M76.8833 21V13.32H84.6593V21H76.8833Z" fill="#0BBEF2" />
       </svg>
-
       <div
         style={{
           display: "flex",
           gap: "45px",
           justifyContent: "space-between",
           alignItems: "center",
+          // cursor: "pointer"
         }}
       >
         <NavigationItem href="/products">Products</NavigationItem>
@@ -43,14 +43,14 @@ export const NavigationBar = () => {
             marginRight: "60px",
             backgroundColor: "transparent",
             fontSize: "16px",
-            opacity: "52%",
-            width: "128px",
+           cursor: "pointer",
+            padding: "15px",
             height: "56px",
             borderRadius: "5px",
             gap: "320px",
             borderStyle: "solid",
-            borderColor: "#FDFEFF",
-            color: "#FDFEFF",
+            borderColor: "#gray",
+            color: "#FFFFFF",
           }}
         >
           Get Access

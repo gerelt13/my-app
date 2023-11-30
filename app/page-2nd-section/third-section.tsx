@@ -16,6 +16,7 @@ export const ThirdSection = () => {
             width: "398px",
             fontSize: "48px",
             alignContent: "center",
+            //  position: "absolute"
           }}
         >
           Scheduling that actually works
@@ -41,6 +42,7 @@ export const ThirdSection = () => {
             display: "flex",
             alignItems: "center",
             gap: "20px",
+            cursor: "pointer",
           }}
           href="/"
         >

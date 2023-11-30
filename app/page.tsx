@@ -9,6 +9,7 @@ import { FirstSection } from "./page-2nd-section/first-section";
 import { SecondSection } from "./page-2nd-section/second-section";
 import { ThirdSection } from "./page-2nd-section/third-section";
 import { FourthSection } from "./page-2nd-section/fourth-section";
+import { Footer } from "./page-2nd-section/footer";
 
 export default function Home() {
   const array = [
@@ -65,14 +66,17 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
+      <Star />
+    
+     
 
       <div style={{ paddingTop: "60px", display: "flex", gap: "20px" }}>
         {array.map((value, index) => {
-          let starArray = new Array(value.star).fill(1);
+          let starArray = new Array(value.star).fill(4);
           return (
             <div
               style={{
-                backgroundColor: "#F5F7FA;",
+                backgroundColor: "#F5F7FA",
                 width: "366px",
                 height: "374px",
                 paddingLeft: "20px",
@@ -82,6 +86,7 @@ export default function Home() {
                 marginLeft: "141px",
                 boxShadow: "10px 5px 5px gray",
                 border: "1px solid gray",
+                
               }}
               key={index}
             >
@@ -110,10 +115,12 @@ export default function Home() {
                 {value.name}
               </p>
               <img src={value.imageUrl} />
+              
             </div>
           );
         })}
       </div>
+         <Footer />
     </div>
   );
 }

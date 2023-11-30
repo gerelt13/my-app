@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import { Mulish, Cabin } from "next/font/google";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 
 const inter = Mulish({ subsets: ["latin"] });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
