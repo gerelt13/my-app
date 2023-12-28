@@ -36,8 +36,9 @@ export default function Home() {
         style={{ 
           display: "flex",
           flexWrap: "wrap",
-          width: "1440px",
+          width: "1180px",
           gap: "20px",
+        
         }}
         >
         {value &&
