@@ -10,6 +10,9 @@ import { SecondSection } from "./page-2nd-section/second-section";
 import { ThirdSection } from "./page-2nd-section/third-section";
 import { FourthSection } from "./page-2nd-section/fourth-section";
 import { Footer } from "./page-2nd-section/footer";
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { Logo } from "./Logo";
+
 
 export default function Home() {
   const array = [
@@ -67,10 +70,8 @@ export default function Home() {
       <ThirdSection />
       <FourthSection />
       <Star />
-    
-     
 
-      <div style={{ paddingTop: "60px", display: "flex", gap: "20px" }}>
+      <div style={{ paddingTop: "60px", display: "flex", gap: "10px", }}>
         {array.map((value, index) => {
           let starArray = new Array(value.star).fill(4);
           return (
@@ -81,12 +82,11 @@ export default function Home() {
                 height: "374px",
                 paddingLeft: "20px",
                 paddingTop: "40px",
-
+               
                 justifyContent: "space-around",
                 marginLeft: "141px",
                 boxShadow: "10px 5px 5px gray",
                 border: "1px solid gray",
-                
               }}
               key={index}
             >
@@ -115,12 +115,14 @@ export default function Home() {
                 {value.name}
               </p>
               <img src={value.imageUrl} />
-              
             </div>
           );
         })}
       </div>
-         <Footer />
+      <div style={{ marginLeft: "1610px", paddingTop: "30px", }}>
+      <ArrowBack />
+      <ArrowForward /></div>
+      <Footer />
     </div>
   );
 }

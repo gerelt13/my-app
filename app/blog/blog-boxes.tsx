@@ -9,13 +9,15 @@ export const BlogBoxes = ({
   reviewImage,
   blogReviewName,
 }) => {
+  console.log(ImageUrl);
   return (
     <div style={{ alignContent: "space-between" }}>
+      
       <div
         style={{
-          height: "440px",
           width: "363px",
           backgroundColor: "white",
+
           borderRadius: "30px",
           overflow: "hidden",
         }}
@@ -31,7 +33,7 @@ export const BlogBoxes = ({
           <h1 style={{ color: "#25313C" }}>{title}</h1>
           <p
             style={{
-              color: "#25313C",
+              color: "radial-gradient(134.38% 115.87% )",
               paddingTop: "15px",
               paddingBottom: "27px",
             }}
@@ -55,6 +57,7 @@ export const BlogBoxes = ({
             <p style={{ color: "#6D7D8B" }}>{blogReviewName}</p>
             <p>|</p>
             <p style={{ color: "#6D7D8B" }}>2nd January,2022</p>
+            
           </div>
         </div>
       </div>

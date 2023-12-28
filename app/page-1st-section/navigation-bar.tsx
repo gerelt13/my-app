@@ -43,7 +43,7 @@ export const NavigationBar = () => {
             marginRight: "60px",
             backgroundColor: "transparent",
             fontSize: "16px",
-           cursor: "pointer",
+            cursor: "pointer",
             padding: "15px",
             height: "56px",
             borderRadius: "5px",

@@ -1,4 +1,5 @@
 "use client";
+
 import { Footer } from "@/app/page-2nd-section/footer";
 import { NavigationBar } from "../page-1st-section/navigation-bar";
 import { BlogBoxes } from "./blog-boxes";
@@ -16,40 +17,44 @@ export default function Home() {
   );
 
   return (
+    
     <main
       style={{
         display: "flex",
-        backgroundSize: "cover",
+       
         backgroundColor: "#d3d3d3",
         flexWrap: "wrap",
         gap: "20px",
         flexDirection: "column",
         alignItems: "center",
       }}
-    >
+      >
+      
+      <NavigationBar />
       <BlogHeader />
       <div
-        style={{
+        style={{ 
           display: "flex",
           flexWrap: "wrap",
           width: "1440px",
           gap: "20px",
         }}
-      >
+        >
         {value &&
           value.docs.map((document) => {
-            console.log(document);
             return (
               <BlogBoxes
-                title={document.data().title}
-                description={document.data().description}
-                ImageUrl={document.data().ImageUrl}
-                reviewImage={document.data().reviewImage}
-                blogReviewName={document.data().blogReviewName}
-                key={document.data().title}
+              title={document.data().title}
+              description={document.data().description}
+              ImageUrl={document.data().ImageUrl}
+              reviewImage={document.data().reviewImage}
+              blogReviewName={document.data().blogReviewName}
+              key={document.data().title}
               />
-            );
-          })}
+              );
+            })}
+        <Footer />
+        <div style={{width: "1440px"}}></div>
       </div>
     </main>
   );
