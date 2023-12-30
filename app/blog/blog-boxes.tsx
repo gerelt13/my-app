@@ -15,18 +15,20 @@ export const BlogBoxes = ({
   return (
     <div
       style={{
-        width: "363px",
+        width: "350px",
         height: "500px",
         backgroundColor: "white",
         borderRadius: "30px",
         overflow: "hidden",
+       
       }}
     >
-      <Image src={ImageUrl} width={370} height={147} alt="profileImage" />
+      <Image style={{marginLeft:"-05px"}} src={ImageUrl} width={363} height={147} alt="profileImage" />
       <div
         style={{
           paddingLeft: "24px",
           paddingTop: "10px",
+         
         }}
       >
         <h1 style={{ color: "#25313C" }}>{title}</h1>
@@ -44,6 +46,7 @@ export const BlogBoxes = ({
             display: "flex",
             gap: "10px",
             alignItems: "center",
+            
            
           }}
         >
