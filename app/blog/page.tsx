@@ -20,7 +20,6 @@ export default function Home() {
     <main
       style={{
         display: "flex",
-
         backgroundColor: "#d3d3d3",
         flexWrap: "wrap",
         gap: "20px",
@@ -51,9 +50,8 @@ export default function Home() {
               />
             );
           })}
-        <Footer />
-        <div style={{ width: "1440px" }}></div>
       </div>
+      <Footer />
     </main>
   );
 }

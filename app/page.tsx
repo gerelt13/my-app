@@ -1,18 +1,17 @@
-
 import BackgroundImage from "../public/brooke.png";
-import { EmailInput } from "../components/email-input";
+import { EmailInput } from "./components/email-input";
 
-import { NavigationBar } from "./navigation-bar";
-import { Header } from "./header";
-import { Button } from "./button";
-import { FirstSection } from "../page-2nd-section/first-section";
-import { SecondSection } from "../page-2nd-section/second-section";
-import { ThirdSection } from "../page-2nd-section/third-section";
-import { FourthSection } from "../page-2nd-section/fourth-section";
-import { Footer } from "../page-2nd-section/footer";
+import { NavigationBar } from "./page-1st-section/navigation-bar";
+import { Header } from "./page-1st-section/header";
+import { Button } from "./page-1st-section/button";
+import { FirstSection } from "./page-2nd-section/first-section";
+import { SecondSection } from "./page-2nd-section/second-section";
+import { ThirdSection } from "./page-2nd-section/third-section";
+import { FourthSection } from "./page-2nd-section/fourth-section";
+import { Footer } from "./page-2nd-section/footer";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import { Logo } from "../Logo";
-import { Star } from "../components/star";
+import { Logo } from "./Logo";
+import { Star } from "./components/star";
 
 export default function Home() {
   const array = [
