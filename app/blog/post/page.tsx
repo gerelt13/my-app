@@ -7,7 +7,6 @@ import { EmailInput } from "@/app/components/email-input";
 import { CommentBox } from "./comment-box";
 
 export default function Home() {
-  
   return (
     <div
       style={{
@@ -21,9 +20,7 @@ export default function Home() {
     >
       <div>
         <NavigationBarBlack />
-        <div>
-          {/* <NavigationItemBlack /> */}
-        </div>
+        <div>{/* <NavigationItemBlack /> */}</div>
 
         <h1
           style={{
@@ -37,7 +34,6 @@ export default function Home() {
             lineHeight: "78px",
           }}
         >
-   
           10 Secrets for managing a remote team
         </h1>
         <div
@@ -167,26 +163,27 @@ export default function Home() {
             }}
           />{" "}
           <CommentBox />
-          <button
-            style={{
-              marginLeft: "1090px",
-              width: "100px",
-              fontSize: "16px",
-              cursor: "pointer",
-              boxShadow: "10px 5px 5px gray",
-
-             
-              height: "56px",
-              borderRadius: "5px",
-              borderStyle: "solid",
-              borderColor: "#4DA0FD",
-              color: "#4DA0FD",
-            }}
-          >
-           Send
-          </button>
-          <EmailInput />
-         
+          <a href="/blog/create">
+            <button
+              style={{
+                marginLeft: "1090px",
+                width: "100px",
+                fontSize: "16px",
+                cursor: "pointer",
+                boxShadow: "10px 5px 5px gray",
+                height: "56px",
+                borderRadius: "5px",
+                borderStyle: "solid",
+                borderColor: "#4DA0FD",
+                color: "#4DA0FD",
+               marginBottom: "20px",
+               marginTop: "10px"
+              }}
+            
+            >
+              Send
+            </button>
+          </a>
         </div>
       </div>
       <Footer />

@@ -98,7 +98,9 @@ export default function LoginPage() {
             justifyContent: "center",
             backgroundColor: "#24243E",
           }}
+          
           endIcon={
+            
             <svg
               width="33"
               height="33"

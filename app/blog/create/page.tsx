@@ -7,7 +7,6 @@ import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { useState } from "react";
 import backgroundImage from "../create/blueAi.jpg";
 
-// import ClearIcon from "@mui/icons-material/clear";
 
 export default function Home() {
   const [blogReviewName, setBlogReviewName] = useState("");

@@ -1,6 +1,7 @@
 export const Button = () => {
   return (
     <div>
+      <a href="/blog">
       <button
         style={{
           backgroundColor: "#0BBEF2",
@@ -15,6 +16,7 @@ export const Button = () => {
       >
         Get early access
       </button>
+      </a>
     </div>
   );
 };

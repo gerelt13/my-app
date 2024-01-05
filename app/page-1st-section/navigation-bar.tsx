@@ -10,6 +10,7 @@ export const NavigationBar = () => {
           alignItems: "center",
         }}
       >
+       <a href="/">
         <svg
           width="85"
           height="22"
@@ -23,6 +24,7 @@ export const NavigationBar = () => {
           />
           <path d="M76.8833 21V13.32H84.6593V21H76.8833Z" fill="#0BBEF2" />
         </svg>
+        </a>
         <div
           style={{
             display: "flex",
@@ -31,12 +33,12 @@ export const NavigationBar = () => {
             alignItems: "center",
           }}
         >
-          <NavigationItem href="/products">Products</NavigationItem>
-          <NavigationItem href="/products">Services</NavigationItem>
-          <NavigationItem href="/products">Contact</NavigationItem>
-          <NavigationItem href="/products">Log In</NavigationItem>
+          <NavigationItem href="login">Log In</NavigationItem>
+          <NavigationItem href="blog/create">Create</NavigationItem>
+          <NavigationItem href="/blog">Blogs</NavigationItem>
+          {/* <NavigationItem href="signup">Sign Up</NavigationItem> */}
 
-          <button
+          {/* <button
             style={{
               marginRight: "60px",
               backgroundColor: "transparent",
@@ -51,7 +53,7 @@ export const NavigationBar = () => {
             }}
           >
             Get Access
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

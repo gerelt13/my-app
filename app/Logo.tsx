@@ -9,6 +9,7 @@ export const Logo = () => {
         backgroundColor: "#252B3B",
       }}
     >
+      <a href="/">
       <svg
         width="87"
         height="60"
@@ -23,6 +24,7 @@ export const Logo = () => {
 
         <path d="M76.8833 48V40.32H84.6593V48H76.8833Z" fill="#0BBEF2" />
       </svg>
+      </a>
     </div>
   );
 };

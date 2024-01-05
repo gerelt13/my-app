@@ -248,19 +248,21 @@ export const Footer = () => {
                 paddingBottom: "20px",
               }}
             >
+              <a href="signup"></a>
+              </p>
               {" "}
               Subscribe to our newsletter (under construction)
-            </p>
             <div style={{}}>
               <input
                 style={{
                   height: "56px",
                   width: "296.38px",
-
+                  
                   paddingLeft: "20px",
                 }}
                 placeholder="Email"
-              ></input>
+                ></input>
+              
             </div>
           </div>
         </div>
