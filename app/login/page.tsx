@@ -2,6 +2,8 @@
 
 import RemoveRedEyeTwoToneIcon from "@mui/icons-material/RemoveRedEyeTwoTone";
 import VisibilityTwoToneIcon from "@mui/icons-material/VisibilityTwoTone";
+
+
 import {
   Button,
   IconButton,
@@ -9,7 +11,7 @@ import {
   OutlinedInput,
   TextField,
 } from "@mui/material";
-import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { ChangeEventHandler, useState } from "react";
 import { app } from "../firebase";
@@ -29,7 +31,7 @@ export default function LoginPage() {
 
   const handleLogin = async () => {
     try {
-      const user = await createUserWithEmailAndPassword(auth, email, password);
+      const user = await signInWithEmailAndPassword(auth, email, password);
       console.log(user);
       router.push("/");
     } catch (err) {

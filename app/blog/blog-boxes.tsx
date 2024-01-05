@@ -9,6 +9,11 @@ export const BlogBoxes = ({
   ImageUrl,
   reviewImage,
   blogReviewName,
+}:{title: string;
+description: string;
+ImageUrl: string;
+reviewImage: string;
+blogReviewName: string;
 }) => {
   return (
     <div
@@ -33,7 +38,9 @@ export const BlogBoxes = ({
           paddingLeft: "24px",
           paddingTop: "10px",
         }}
-      >
+      > <a href="blog/post" style={{ color: "black" }}>
+      here
+    </a>
         <h1 style={{ color: "#25313C" }}>{title}</h1>
         <p
           style={{

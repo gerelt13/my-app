@@ -1,4 +1,4 @@
-import BackgroundImage from "../public/brooke.png";
+import BackgroundImage from "./page-1st-section/brooke.png";
 import { EmailInput } from "./components/email-input";
 
 import { NavigationBar } from "./page-1st-section/navigation-bar";
@@ -89,7 +89,7 @@ export default function Home() {
               key={index}
             >
               {array.map((value, index) => {
-                return <Star key={value} />;
+                return <Star key={index} />;
               })}
 
               <p

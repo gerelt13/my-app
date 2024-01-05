@@ -1,5 +1,4 @@
-
-import BackgroundImage from "../public/brooke.png";
+import BackgroundImage from "./brooke.png";
 import { EmailInput } from "../components/email-input";
 
 import { NavigationBar } from "./navigation-bar";
@@ -14,7 +13,6 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 import { Star } from "../components/star";
 import { Logo } from "../Logo";
-
 
 export default function Home() {
   const array = [
@@ -71,7 +69,6 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      
 
       <div style={{ paddingTop: "60px", display: "flex", gap: "10px" }}>
         {array.map((value, index) => {
@@ -93,7 +90,7 @@ export default function Home() {
               key={index}
             >
               {array.map((value, index) => {
-                return <Star key={value} />;
+                return <Star key={index} />;
               })}
 
               <p
@@ -125,8 +122,8 @@ export default function Home() {
         <ArrowBack />
         <ArrowForward />
       </div>
-       <Logo />
-      <Footer /> 
+      <Logo />
+      <Footer />
     </div>
   );
 }

@@ -5,8 +5,8 @@ export const Footer = () => {
     <div
       style={{
         backgroundColor: "#252B3B",
-        
-        width: "99vw",
+
+        width: "100vw",
         color: "#fff",
         paddingBottom: "50px",
         marginBottom: "120px",
@@ -48,7 +48,10 @@ export const Footer = () => {
                   color: "#FFFFFF",
                 }}
               >
-                instagram
+                
+                <a href="login" style={{ color: "#FFFFFF" }}>
+                  instagram
+                </a>
               </span>
             </div>
 
@@ -71,8 +74,9 @@ export const Footer = () => {
                   fontSize: "14px",
                   color: "#FFFFFF",
                 }}
-              >
+              ><a href="/blog/create" style={{ color: "#FFFFFF" }}>
                 Facebook
+                </a>
               </span>
             </div>
 
@@ -96,7 +100,8 @@ export const Footer = () => {
                   color: "#FFFFFF",
                 }}
               >
-                Twitter{" "}
+                <a href="/signup" style={{ color: "#FFFFFF" }}>
+                Twitter{" "}</a>
               </span>
             </div>
 
@@ -181,7 +186,7 @@ export const Footer = () => {
               fontSize: "14px",
             }}
           >
-            <p style={{ fontSize: "18px", paddingBottom: "10px"}}>Use Cases</p>
+            <p style={{ fontSize: "18px", paddingBottom: "10px" }}>Use Cases</p>
             <p>UI design</p>
             <p>UX design</p>
             <p>Prototyping</p>
@@ -231,13 +236,21 @@ export const Footer = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-            paddingLeft:"150px",
+              paddingLeft: "260px",
               paddingTop: " 30px",
               gap: "20px",
-             
             }}
           >
-            <p style={{fontSize:"22px",marginRight: "30px", paddingBottom:"20px" }}> Subscribe to our newsletter</p>
+            <p
+              style={{
+                fontSize: "22px",
+                marginRight: "30px",
+                paddingBottom: "20px",
+              }}
+            >
+              {" "}
+              Subscribe to our newsletter (under construction)
+            </p>
             <div style={{}}>
               <input
                 style={{

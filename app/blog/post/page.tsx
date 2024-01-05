@@ -22,7 +22,7 @@ export default function Home() {
       <div>
         <NavigationBarBlack />
         <div>
-          <NavigationItemBlack />
+          {/* <NavigationItemBlack /> */}
         </div>
 
         <h1
@@ -37,6 +37,7 @@ export default function Home() {
             lineHeight: "78px",
           }}
         >
+   
           10 Secrets for managing a remote team
         </h1>
         <div

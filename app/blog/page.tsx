@@ -29,10 +29,10 @@ export default function Home() {
       }}
     >
       <NavigationBarBlack />
-      <NavigationItemBlack />
+      
       
       <BlogHeader />
-      
+    
 
       <div
         style={{
