@@ -2,14 +2,11 @@ export const Logo = () => {
   return (
     <div
       style={{
-                width: "100px",
-        // height: "336px",
-        // paddingLeft: "140px",
+        width: "100px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
         backgroundColor: "#252B3B",
-        // marginTop: "200px",
       }}
     >
       <svg

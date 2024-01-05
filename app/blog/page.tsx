@@ -1,13 +1,13 @@
 "use client";
-
 import { Footer } from "@/app/page-2nd-section/footer";
-import { NavigationBar } from "../page-1st-section/navigation-bar";
-import { BlogBoxes } from "./blog-boxes";
+import { NavigationItemBlack } from "./post/navigation-itemBlack";
+import { NavigationBarBlack } from "./post/navigation-barBlack";
 import { BlogHeader } from "./blog-header";
 import { collection, getFirestore } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { app } from "../firebase";
-
+import { BlogBoxes } from "./blog-boxes";
+import Image from "next/image";
 export default function Home() {
   const [value, loading, error] = useCollection(
     collection(getFirestore(app), "blog"),
@@ -15,7 +15,8 @@ export default function Home() {
       snapshotListenOptions: { includeMetadataChanges: true },
     }
   );
-
+  
+  
   return (
     <main
       style={{
@@ -27,8 +28,12 @@ export default function Home() {
         alignItems: "center",
       }}
     >
-      <NavigationBar />
+      <NavigationBarBlack />
+      <NavigationItemBlack />
+      
       <BlogHeader />
+      
+
       <div
         style={{
           display: "flex",

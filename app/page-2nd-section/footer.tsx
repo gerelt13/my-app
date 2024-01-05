@@ -5,9 +5,11 @@ export const Footer = () => {
     <div
       style={{
         backgroundColor: "#252B3B",
-        paddingLeft: "150px",
-        width: "100vw",
+        
+        width: "99vw",
         color: "#fff",
+        paddingBottom: "50px",
+        marginBottom: "120px",
       }}
     >
       <div style={{ margin: "0 auto", width: "1440px" }}>
@@ -169,26 +171,80 @@ export const Footer = () => {
               </p>
             </div>
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div>Use Cases</div>
-            <div>UI design</div>
-            <div>UX design</div>
-            <div>
-              Prototyping
-              <div>
-                <div>UI design</div>
-                <div>UX design</div>
-                <div>Prototyping</div>
-              </div>
-            </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "30px",
+              paddingTop: "28px",
+              paddingLeft: "250px",
+              fontSize: "14px",
+            }}
+          >
+            <p style={{ fontSize: "18px", paddingBottom: "10px"}}>Use Cases</p>
+            <p>UI design</p>
+            <p>UX design</p>
+            <p>Prototyping</p>
+            <p>UI design</p>
+            <p>UX design</p>
+            <p>Prototyping</p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <p style={{}}> Subscribe to our newsletter</p>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "30px",
+              paddingTop: "28px",
+              paddingLeft: "150px",
+              fontSize: "14px",
+            }}
+          >
+            <p style={{ fontSize: "18px", paddingBottom: "10px" }}>Explore</p>
+            <p>Figma</p>
+            <p>Customers</p>
+            <p>Why I Love Figma</p>
+            <p>Figma</p>
+            <p>Customers</p>
+            <p>Why I Love Figma</p>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "30px",
+              paddingTop: "28px",
+              paddingLeft: "150px",
+              fontSize: "14px",
+            }}
+          >
+            <p style={{ fontSize: "18px", paddingBottom: "10px" }}>Resourses</p>
+            <p>Community Resourses Hub</p>
+            <p>Support</p>
+            <p>Education</p>
+            <p>Community Resourses Hub</p>
+            <p>Support</p>
+            <p>Education</p>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+            paddingLeft:"150px",
+              paddingTop: " 30px",
+              gap: "20px",
+             
+            }}
+          >
+            <p style={{fontSize:"22px",marginRight: "30px", paddingBottom:"20px" }}> Subscribe to our newsletter</p>
             <div style={{}}>
               <input
                 style={{
                   height: "56px",
                   width: "296.38px",
+
+                  paddingLeft: "20px",
                 }}
                 placeholder="Email"
               ></input>

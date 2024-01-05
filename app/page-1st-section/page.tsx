@@ -1,17 +1,20 @@
-import BackgroundImage from "../public/brooke.png";
-import { EmailInput } from "./components/email-input";
 
-import { NavigationBar } from "./page-1st-section/navigation-bar";
-import { Header } from "./page-1st-section/header";
-import { Button } from "./page-1st-section/button";
-import { FirstSection } from "./page-2nd-section/first-section";
-import { SecondSection } from "./page-2nd-section/second-section";
-import { ThirdSection } from "./page-2nd-section/third-section";
-import { FourthSection } from "./page-2nd-section/fourth-section";
-import { Footer } from "./page-2nd-section/footer";
+import BackgroundImage from "../public/brooke.png";
+import { EmailInput } from "../components/email-input";
+
+import { NavigationBar } from "./navigation-bar";
+import { Header } from "./header";
+import { Button } from "./button";
+import { FirstSection } from "../page-2nd-section/first-section";
+import { SecondSection } from "../page-2nd-section/second-section";
+import { ThirdSection } from "../page-2nd-section/third-section";
+import { FourthSection } from "../page-2nd-section/fourth-section";
+import { Footer } from "@/app/page-2nd-section/footer";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
-import { Logo } from "./Logo";
-import { Star } from "./components/star";
+
+import { Star } from "../components/star";
+import { Logo } from "../Logo";
+
 
 export default function Home() {
   const array = [
@@ -40,7 +43,7 @@ export default function Home() {
       star: 4,
       sentence:
         "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-      name: "Eleanor Pena",
+      name: "TEST TEST TEST",
       imageUrl: "/eleanor.png",
     },
   ];
@@ -68,7 +71,7 @@ export default function Home() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-     
+      
 
       <div style={{ paddingTop: "60px", display: "flex", gap: "10px" }}>
         {array.map((value, index) => {
@@ -81,6 +84,7 @@ export default function Home() {
                 height: "374px",
                 paddingLeft: "20px",
                 paddingTop: "40px",
+
                 justifyContent: "space-around",
                 marginLeft: "141px",
                 boxShadow: "10px 5px 5px gray",
@@ -105,7 +109,7 @@ export default function Home() {
               <p
                 style={{
                   fontFamily: "Roboto",
-                  fontSize: "30px",
+                  fontSize: "3000px",
                   fontStyle: "italic",
                   color: "#000000",
                 }}
@@ -117,12 +121,12 @@ export default function Home() {
           );
         })}
       </div>
-      <div style={{ marginLeft: "1700px", paddingBottom: "30px", paddingTop: "30px" }}>
+      <div style={{ marginLeft: "1610px", paddingTop: "30px" }}>
         <ArrowBack />
         <ArrowForward />
       </div>
-
-      <Footer />
+       <Logo />
+      <Footer /> 
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 import { useState } from "react";
 import backgroundImage from "../create/blueAi.jpg";
-import { Roboto } from "next/font/google";
+
 // import ClearIcon from "@mui/icons-material/clear";
 
 export default function Home() {
@@ -63,7 +63,6 @@ export default function Home() {
             <h1
               style={{
                 paddingTop: "200px",
-
                 fontSize: "70px",
                 backgroundImage:
                   "linear-gradient(134.38deg, #FEDFD0 0%, #FF7955 75.12%, #2665F9 100%)",

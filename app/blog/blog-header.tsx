@@ -24,7 +24,6 @@ export const BlogHeader = () => {
           style={{
             fontSize: "18px",
             color: "#6D7D8B",
-            fontWeight: "600px",
             width: "480px",
             height: "29px",
             lineHeight: "29.37px",
