@@ -19,8 +19,10 @@ export const ThirdSection = () => {
             //  position: "absolute"
           }}
         >
+          
           Scheduling that actually works
         </h1>
+        
         <p
           style={{
             height: "120px",
@@ -44,7 +46,7 @@ export const ThirdSection = () => {
             gap: "20px",
             cursor: "pointer",
           }}
-          href="/"
+         
         >
           Learn more
           <svg

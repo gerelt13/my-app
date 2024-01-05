@@ -35,7 +35,6 @@ export const SecondSection = () => {
             height: " 28px",
             fontSize: "16px",
             display: "flex",
-
             gap: "20px",
           }}
           href="/"

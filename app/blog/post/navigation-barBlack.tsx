@@ -38,7 +38,7 @@ export const NavigationBarBlack = () => {
           <NavigationItemBlack href="blog/create">Create</NavigationItemBlack>
           <NavigationItemBlack href="/blog">Blogs</NavigationItemBlack>
           {/* <NavigationItemBlack href="signup">Sign Up</NavigationItemBlack> */}
-<a href="/blog/post">
+{/* <a href="/blog/post">
           <button
             style={{
               marginRight: "60px",
@@ -55,7 +55,7 @@ export const NavigationBarBlack = () => {
           >
             Get Access
           </button>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -66,8 +66,8 @@ export const FirstSection = () => {
       <div
         style={{
           display: "flex",
-          width: "263px",
-          paddingRight: "345px",
+          width: "744px",
+          // paddingRight: "345px",
           // position: "absolute"
         }}
       >

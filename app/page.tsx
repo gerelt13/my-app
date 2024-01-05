@@ -118,8 +118,7 @@ export default function Home() {
         })}
       </div>
       <div style={{ marginLeft: "1700px", paddingBottom: "30px", paddingTop: "30px" }}>
-        <ArrowBack />
-        <ArrowForward />
+       
       </div>
 
       <Footer />

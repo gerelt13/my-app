@@ -9,7 +9,7 @@ export const Footer = () => {
         width: "100vw",
         color: "#fff",
         paddingBottom: "50px",
-        marginBottom: "120px",
+       
       }}
     >
       <div style={{ margin: "0 auto", width: "1440px" }}>
@@ -236,7 +236,7 @@ export const Footer = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              paddingLeft: "260px",
+              paddingLeft: "211px",
               paddingTop: " 30px",
               gap: "20px",
             }}
