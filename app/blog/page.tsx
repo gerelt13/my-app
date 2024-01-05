@@ -1,22 +1,33 @@
 "use client";
 import { Footer } from "@/app/page-2nd-section/footer";
-import { NavigationItemBlack } from "./post/navigation-itemBlack";
-import { NavigationBarBlack } from "./post/navigation-barBlack";
-import { BlogHeader } from "./blog-header";
 import { collection, getFirestore } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { app } from "../firebase";
 import { BlogBoxes } from "./blog-boxes";
-import Image from "next/image";
+import { BlogHeader } from "./blog-header";
+import { NavigationBarBlack } from "./[id]/navigation-barBlack";
+
 export default function Home() {
-  const [value, loading, error] = useCollection(
+  const [value, loading] = useCollection(
     collection(getFirestore(app), "blog"),
     {
       snapshotListenOptions: { includeMetadataChanges: true },
     }
   );
-  
-  
+  if (loading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
   return (
     <main
       style={{
@@ -29,11 +40,7 @@ export default function Home() {
       }}
     >
       <NavigationBarBlack />
-      
-      
       <BlogHeader />
-    
-
       <div
         style={{
           display: "flex",
@@ -45,14 +52,20 @@ export default function Home() {
         {value &&
           value.docs.map((document) => {
             return (
-              <BlogBoxes
-                title={document.data().title}
-                description={document.data().description}
-                ImageUrl={document.data().ImageUrl}
-                reviewImage={document.data().reviewImage}
-                blogReviewName={document.data().blogReviewName}
-                key={document.data().title}
-              />
+              <a
+                href={`/blog/${document.id}`}
+                key={document.id}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <BlogBoxes
+                  title={document.data().title}
+                  description={document.data().description}
+                  ImageUrl={document.data().ImageUrl}
+                  reviewImage={document.data().reviewImage}
+                  blogReviewName={document.data().blogReviewName}
+                  date={document.data().date}
+                />
+              </a>
             );
           })}
       </div>

@@ -1,7 +1,4 @@
-// import { deleteDoc, doc, getFirestore } from "firebase/firestore";
-// import ClearIcon from "@mui/icons-material/Clear";
 import Image from "next/image";
-
 
 export const BlogBoxes = ({
   title,
@@ -9,11 +6,14 @@ export const BlogBoxes = ({
   ImageUrl,
   reviewImage,
   blogReviewName,
-}:{title: string;
-description: string;
-ImageUrl: string;
-reviewImage: string;
-blogReviewName: string;
+  date,
+}: {
+  title: string;
+  description: string;
+  ImageUrl: string;
+  reviewImage: string;
+  blogReviewName: string;
+  date: string;
 }) => {
   return (
     <div
@@ -25,7 +25,6 @@ blogReviewName: string;
         overflow: "hidden",
       }}
     >
-   
       <Image
         style={{ marginLeft: "-05px" }}
         src={ImageUrl}
@@ -38,9 +37,7 @@ blogReviewName: string;
           paddingLeft: "24px",
           paddingTop: "10px",
         }}
-      > <a href="blog/post" style={{ color: "black" }}>
-      here
-    </a>
+      >
         <h1 style={{ color: "#25313C" }}>{title}</h1>
         <p
           style={{
@@ -67,12 +64,9 @@ blogReviewName: string;
           />
           <p style={{ color: "#6D7D8B" }}>{blogReviewName}</p>
           <p>|</p>
-          <p style={{ color: "#6D7D8B" }}>2nd January,2022</p>
+          <p style={{ color: "#6D7D8B" }}>{date}</p>
         </div>
       </div>
-
-   
- 
     </div>
   );
 };

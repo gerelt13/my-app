@@ -1,27 +1,47 @@
+"use client";
 import Image from "next/image";
-
-import { NavigationItemBlack } from "./navigation-itemBlack";
-import { NavigationBarBlack } from "./navigation-barBlack";
 import { Footer } from "@/app/page-2nd-section/footer";
-import { EmailInput } from "@/app/components/email-input";
-import { CommentBox } from "./comment-box";
+import { NavigationBarBlack } from "./navigation-barBlack";
+import { useDocument } from "react-firebase-hooks/firestore";
+import { doc, getFirestore } from "firebase/firestore";
+import { app } from "@/app/firebase";
 
-export default function Home() {
+export default function Home({ params }: { params: { id: string } }) {
+  const id = params.id;
+  const [value, loading] = useDocument(doc(getFirestore(app), "blog", id), {
+    snapshotListenOptions: { includeMetadataChanges: true },
+  });
+  const { title, description, ImageUrl, reviewImage, blogReviewName, date } =
+    value?.data() || {};
+  if (loading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
   return (
     <div
       style={{
-        height: "100vh",
+        minHeight: "100vh",
         width: "100wh",
         backgroundSize: "cover",
         backgroundColor: "#FFFFFF",
-        justifyContent: "space-between",
         paddingTop: "30px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
+      <NavigationBarBlack />
       <div>
-        <NavigationBarBlack />
-        <div>{/* <NavigationItemBlack /> */}</div>
-
         <h1
           style={{
             height: "160px",
@@ -29,46 +49,42 @@ export default function Home() {
             width: "700px",
             fontSize: "48px",
             paddingTop: "200px",
-            paddingLeft: "400px",
             color: "#25313C",
             lineHeight: "78px",
           }}
         >
-          10 Secrets for managing a remote team
+          {title}
         </h1>
         <div
           style={{
             textAlign: "center",
             display: "flex",
             alignItems: "center",
-            paddingLeft: "410px",
             paddingTop: "20px",
           }}
         >
-          <img src="/blogWade.png" alt="review name" width={45} height={45} />
-          <p style={{ color: "#6D7D8B", paddingLeft: "20px" }}>Shedrack eze</p>
-          <p style={{ paddingLeft: "20px" }}>| </p>
+          <Image src={reviewImage} alt="review name" width={45} height={45} />
           <p style={{ color: "#6D7D8B", paddingLeft: "20px" }}>
-            2nd January,2022
+            {blogReviewName}
           </p>
+          <p style={{ paddingLeft: "20px" }}>| </p>
+          <p style={{ color: "#6D7D8B", paddingLeft: "20px" }}>{date}</p>
         </div>
-        <Image
-          src="/postPic.png"
-          alt="post image"
-          width={1200}
-          height={600}
-          style={{
-            paddingTop: "30px",
-            marginLeft: "200px",
-            paddingBottom: "40px",
-          }}
-        ></Image>
       </div>
-      <p
+      <Image
+        src={ImageUrl}
+        alt="post image"
+        width={1200}
+        height={600}
+        style={{
+          paddingTop: "30px",
+          paddingBottom: "40px",
+        }}
+      ></Image>
+      <div
         style={{
           fontSize: "18px",
           width: "700px",
-          marginLeft: "370px",
           color: "#25313C",
           lineHeight: "30px",
         }}
@@ -96,7 +112,7 @@ export default function Home() {
           and all bring something unique to their readers & subscribers. I want
           to show you what is possible and how you can take inspiration from
           them and create an awesome blog of your own.
-        </p>{" "}
+        </p>
         <p>
           Some of these blogs make over $100k a month, others are just a hobby
           for their owners, but all have the same purpose at their core… the
@@ -112,80 +128,34 @@ export default function Home() {
           for their owners, but all have the same purpose at their core… the
           love of writing and sharing information.
         </p>
-      </p>
+      </div>
       <div
         style={{
           display: "flex",
           gap: "10px",
           alignItems: "center",
+          width: "700px",
+          paddingTop: "50px",
+          paddingBottom: "200px",
         }}
       >
-        <img
-          src="/blogWade.png"
+        <Image
+          src={reviewImage}
           alt="review name"
           width={45}
           height={45}
           style={{
-            marginLeft: "500px",
             paddingTop: "20px",
             paddingBottom: "20px",
           }}
         />
-        <p style={{ fontSize: "16px", paddingLeft: "20px" }}>Written by</p>
-        <p style={{ paddingLeft: "30px", fontSize: "22px" }}>Shedrack eze </p>
-        <p style={{ color: "#6D7D8B", paddingLeft: "20px" }}>CEO Team App</p>
-      </div>
-      <div
-        style={{
-          border: "solid 1px #d3d3d3",
-          marginLeft: "400px",
-          width: "600px",
-        }}
-      ></div>
-      <div>
-        <div
-          style={{
-            color: "#6D7D8B",
-            fontSize: "24px",
-            paddingTop: "30px",
-          }}
-        >
-          <h1 style={{ marginLeft: "500px" }}>Join the conversation</h1>
-          <img
-            src="/blogLeslie.png"
-            alt="review name"
-            width={45}
-            height={45}
-            style={{
-              marginLeft: "500px",
-              alignItems: "center",
-              display: "center",
-            }}
-          />{" "}
-          <CommentBox />
-          <a href="/blog/create">
-            <button
-              style={{
-                marginLeft: "1090px",
-                width: "100px",
-                fontSize: "16px",
-                cursor: "pointer",
-                boxShadow: "10px 5px 5px gray",
-                height: "56px",
-                borderRadius: "5px",
-                borderStyle: "solid",
-                borderColor: "#4DA0FD",
-                color: "#4DA0FD",
-               marginBottom: "20px",
-               marginTop: "10px"
-              }}
-            
-            >
-              Send
-            </button>
-          </a>
+        <div style={{ paddingLeft: "20px" }}>
+          <p style={{ fontSize: "16px" }}>Written by</p>
+          <p style={{ fontSize: "22px" }}>{blogReviewName}</p>
+          <p style={{ color: "#6D7D8B" }}>{description}</p>
         </div>
       </div>
+
       <Footer />
     </div>
   );
