@@ -67,8 +67,6 @@ export const FirstSection = () => {
         style={{
           display: "flex",
           width: "744px",
-          // paddingRight: "345px",
-          // position: "absolute"
         }}
       >
         <Image
